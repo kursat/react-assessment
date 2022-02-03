@@ -4,6 +4,7 @@ interface PropTypes {
   children: ReactElement | ReactNode;
   className?: String;
   disabled?: Boolean;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 const BigButton: React.FC<PropTypes> = (props: PropTypes) => {

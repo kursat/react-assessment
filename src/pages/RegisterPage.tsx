@@ -27,7 +27,8 @@ const RegisterPage: React.FC = () => {
             Phone
           </TabButton>
         </TabButtons>
-        {state === 'email' ? <RegisterEmailForm /> : <RegisterPhoneForm />}
+        <RegisterEmailForm className={state === 'email' ? '' : 'hidden'} />
+        <RegisterPhoneForm className={state === 'phone' ? '' : 'hidden'} />
 
         <div className="text-center mt-8 mx-8 text-xs text-gray-400">
           by clicking continue you must agree to near labs{' '}
