@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-  .counter {
-    @apply w-4/12 h-20 bg-emerald-300 rounded m-4 p-2 flex justify-center items-center;
-  }
 }
