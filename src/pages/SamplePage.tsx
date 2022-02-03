@@ -10,9 +10,19 @@ const SamplePage: React.FC = () => {
   return (
     <div>
       Sample Page
-      <p>{count}</p>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+      <p className={'counter'}>{count}</p>
+      <button
+        className="bg-blue-800 hover:bg-blue-500 active:bg-blue-600 transition-all text-white p-1 m-1 w-20 h-20 rounded-xl text-2xl"
+        onClick={() => dispatch(increment())}
+      >
+        +
+      </button>
+      <button
+        className="bg-red-800 hover:bg-red-500 active:bg-red-600 transition-all text-white p-1 m-1 w-20 h-20 rounded-xl text-2xl"
+        onClick={() => dispatch(decrement())}
+      >
+        -
+      </button>
     </div>
   );
 };
