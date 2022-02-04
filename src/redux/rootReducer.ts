@@ -1,8 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import counter from './features/counterSlice';
+import registrationForm from './features/registrationSlice';
 
 const rootReducer = combineReducers({
-  counter,
+  registrationForm,
 });
 
 export default rootReducer;

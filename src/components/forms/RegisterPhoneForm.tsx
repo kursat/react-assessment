@@ -1,6 +1,9 @@
 import { useFormik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import { setPhone } from '../../redux/features/registrationSlice';
+import { useAppDispatch } from '../../redux/hooks';
 import BigButton from '../BigButton';
 import FormInput from '../FormInput';
 
@@ -16,12 +19,32 @@ const validationSchema = Yup.object().shape({
 });
 
 const RegisterPhoneForm: React.FC<PropTypes> = (props) => {
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
   const formik = useFormik({
     validationSchema,
     isInitialValid: false,
     initialValues: { phone: '' },
     onSubmit: (values) => {
-      console.log('values: ', values);
+      fetch('http://localhost:4000/request-mobile-verification-code', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+        .then((r) => {
+          if (!r.ok) {
+            throw new Error(`API returned ${r.status}`);
+          } else {
+            dispatch(setPhone(values));
+            navigate('/confirm-code');
+          }
+        })
+        .catch((e) => {
+          console.log(e.message);
+        });
     },
   });
 
