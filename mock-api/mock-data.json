@@ -1,6 +1,12 @@
 {
-  "request-email-verification-code": {},
-  "request-mobile-verification-code": {},
-  "registrations": [
-  ]
+  "request-email-verification-code": {
+    "email": "kursat.yigitoglu@gmail.com"
+  },
+  "request-mobile-verification-code": {
+    "phone": "(888) 555 5555"
+  },
+  "verify-code": {
+    "code": "123456"
+  },
+  "registrations": []
 }

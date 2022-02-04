@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     colors: {
       white: '#FFFFFF',
+      black: '#000000',
+      'black-rgba': 'rgba(0, 0, 0, 0.03)',
       blue: {
         100: '#587BE0',
         500: '#1fb6ff',
@@ -19,8 +21,10 @@ module.exports = {
       gray: {
         100: '#F5F5F5',
         200: '#DFDFE0',
+        250: '#CFCFCF',
         300: '#BEBEC2',
         400: '#828282',
+        450: '#808080',
         500: '#6F6E73',
         600: '#414047',
       },

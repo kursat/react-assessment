@@ -2,7 +2,10 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-import { setEmail } from '../../redux/features/registrationSlice';
+import {
+  resetRegistrationForm,
+  setEmail,
+} from '../../redux/features/registrationSlice';
 import { useAppDispatch } from '../../redux/hooks';
 import BigButton from '../BigButton';
 import FormInput from '../FormInput';
@@ -35,6 +38,7 @@ const RegisterEmailForm: React.FC<PropTypes> = (props) => {
           if (!r.ok) {
             throw new Error(`API returned ${r.status}`);
           } else {
+            dispatch(resetRegistrationForm());
             dispatch(setEmail(values));
             navigate('/confirm-code');
           }
@@ -58,6 +62,7 @@ const RegisterEmailForm: React.FC<PropTypes> = (props) => {
   return (
     <form onSubmit={handleSubmit} className={props.className}>
       <FormInput
+        className={'px-6 w-full'}
         name={'email'}
         value={values.email}
         onChange={handleChange}

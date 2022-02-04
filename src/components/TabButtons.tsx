@@ -2,7 +2,7 @@ import React, { ReactElement, ReactNode } from 'react';
 
 interface PropTypes {
   children: ReactElement | ReactNode;
-  className?: String;
+  className?: string;
 }
 
 const TabButtons: React.FC<PropTypes> = (props) => {

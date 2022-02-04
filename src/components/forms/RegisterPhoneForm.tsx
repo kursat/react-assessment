@@ -2,7 +2,10 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-import { setPhone } from '../../redux/features/registrationSlice';
+import {
+  resetRegistrationForm,
+  setPhone,
+} from '../../redux/features/registrationSlice';
 import { useAppDispatch } from '../../redux/hooks';
 import BigButton from '../BigButton';
 import FormInput from '../FormInput';
@@ -38,6 +41,7 @@ const RegisterPhoneForm: React.FC<PropTypes> = (props) => {
           if (!r.ok) {
             throw new Error(`API returned ${r.status}`);
           } else {
+            dispatch(resetRegistrationForm());
             dispatch(setPhone(values));
             navigate('/confirm-code');
           }
@@ -61,6 +65,7 @@ const RegisterPhoneForm: React.FC<PropTypes> = (props) => {
   return (
     <form onSubmit={handleSubmit} className={props.className}>
       <FormInput
+        className={'px-6 w-full'}
         name={'phone'}
         value={values.phone}
         onChange={handleChange}

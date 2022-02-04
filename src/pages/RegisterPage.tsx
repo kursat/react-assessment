@@ -3,6 +3,7 @@ import BigButton from '../components/BigButton';
 import RegisterEmailForm from '../components/forms/RegisterEmailForm';
 import RegisterPhoneForm from '../components/forms/RegisterPhoneForm';
 import Header from '../components/layout/Header';
+import VerticalLine from '../components/layout/VerticalLine';
 import TabButton from '../components/TabButton';
 import TabButtons from '../components/TabButtons';
 
@@ -11,9 +12,11 @@ const RegisterPage: React.FC = () => {
 
   return (
     <main>
-      <Header />
-      <div className="container px-4">
-        <TabButtons className="mt-6 text">
+      <Header>
+        <img alt={'brand logo'} src={'/full-logo.svg'} />
+      </Header>
+      <div className="w-full px-4">
+        <TabButtons className="mt-6 mb-5">
           <TabButton
             selected={state === 'email'}
             onClick={() => setState('email')}
@@ -41,7 +44,8 @@ const RegisterPage: React.FC = () => {
           </a>
         </div>
 
-        <div className=" w-11/12 block my-8 m-auto border-b border-gray-200" />
+        <VerticalLine />
+
         <div className="text-center text-gray-600">
           Already have NEAR account?
         </div>

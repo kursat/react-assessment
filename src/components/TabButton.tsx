@@ -2,7 +2,7 @@ import React, { MouseEventHandler, ReactElement, ReactNode } from 'react';
 
 interface PropTypes {
   children: ReactElement | ReactNode;
-  className?: String;
+  className?: string;
   selected?: Boolean;
   onClick?: MouseEventHandler;
 }

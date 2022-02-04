@@ -2,7 +2,7 @@ import React, { ReactElement, ReactNode } from 'react';
 
 interface PropTypes {
   children: ReactElement | ReactNode;
-  className?: String;
+  className?: string;
   disabled?: Boolean;
   type?: 'button' | 'submit' | 'reset' | undefined;
 }

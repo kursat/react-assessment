@@ -9,6 +9,7 @@ interface PropTypes {
   value?: string;
   valid?: boolean;
   invalidText?: string | boolean;
+  maxLength?: number;
 }
 
 const FormInput: React.FC<PropTypes> = (props) => {
@@ -19,11 +20,9 @@ const FormInput: React.FC<PropTypes> = (props) => {
     'focus:border-purple-500',
     // 'valid:border-purple-500',
     'my-2',
-    'px-6',
     'py-3',
     'rounded-xl',
-    'border-2 w-full',
-    'peer-invalid',
+    'border-2',
   ];
 
   if (!!invalidText) {
@@ -32,7 +31,11 @@ const FormInput: React.FC<PropTypes> = (props) => {
 
   return (
     <>
-      <input className={`${classes.join(' ')} ${className}`} {...otherProps} />
+      <input
+        className={`${classes.join(' ')} ${className}`}
+        {...otherProps}
+        autoComplete={'none'}
+      />
       {invalidText && <p className={'text-red'}>{invalidText}</p>}
     </>
   );
