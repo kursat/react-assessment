@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import ConfirmCodePage from './pages/ConfirmCodePage';
+import CreateAccountPage from './pages/CreateAccountPage';
 import RegisterPage from './pages/RegisterPage';
 import { store } from './redux/store';
 import reportWebVitals from './reportWebVitals';
@@ -17,6 +18,7 @@ ReactDOM.render(
           <Route path="/" element={<App />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/confirm-code" element={<ConfirmCodePage />} />
+          <Route path="/create-account" element={<CreateAccountPage />} />
         </Routes>
       </Provider>
     </BrowserRouter>

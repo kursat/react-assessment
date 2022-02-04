@@ -34,7 +34,7 @@ const VerificationForm = () => {
               console.log('data: ', data);
               if (data.code === values.code) {
                 dispatch(setVerified(true));
-                navigate('/confirm-code');
+                navigate('/create-account');
               } else {
                 setFieldError('code', 'Wrong code');
               }

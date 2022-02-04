@@ -44,7 +44,7 @@ const RegisterPage: React.FC = () => {
           </a>
         </div>
 
-        <VerticalLine />
+        <VerticalLine className={'w-11/12'} />
 
         <div className="text-center text-gray-600">
           Already have NEAR account?

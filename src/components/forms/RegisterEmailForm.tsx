@@ -62,7 +62,7 @@ const RegisterEmailForm: React.FC<PropTypes> = (props) => {
   return (
     <form onSubmit={handleSubmit} className={props.className}>
       <FormInput
-        className={'px-6 w-full'}
+        className={'rounded-xl px-6 w-full'}
         name={'email'}
         value={values.email}
         onChange={handleChange}

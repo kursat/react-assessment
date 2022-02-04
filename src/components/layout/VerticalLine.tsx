@@ -1,8 +1,14 @@
 import React from 'react';
 
-const VerticalLine = () => {
+interface PropTypes {
+  className?: string;
+}
+
+const VerticalLine: React.FC<PropTypes> = ({ className }) => {
   return (
-    <div className=" w-11/12 block my-8 m-auto border-b border-gray-200" />
+    <div
+      className={`block my-8 m-auto border-b border-gray-200 ${className}`}
+    />
   );
 };
 

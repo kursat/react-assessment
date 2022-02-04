@@ -14,7 +14,7 @@ const ConfirmCodePage: React.FC = () => {
     <main>
       <Header>
         <div className="w-full flex justify-center">
-          <p>Verification</p>
+          <p className="font-semibold">Verification</p>
           <button
             className="mr-2 h-6 w-6 absolute right-0"
             onClick={() => navigate('/register')}
@@ -32,7 +32,7 @@ const ConfirmCodePage: React.FC = () => {
       </div>
       <VerificationForm />
 
-      <VerticalLine />
+      <VerticalLine className={'w-11/12'} />
 
       <p className="text-center text-gray-600 mb-6">
         Didn't receive your code?

@@ -8,5 +8,6 @@
   "verify-code": {
     "code": "123456"
   },
-  "registrations": []
+  "users": [
+  ]
 }

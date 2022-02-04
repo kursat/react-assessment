@@ -21,7 +21,6 @@ const FormInput: React.FC<PropTypes> = (props) => {
     // 'valid:border-purple-500',
     'my-2',
     'py-3',
-    'rounded-xl',
     'border-2',
   ];
 

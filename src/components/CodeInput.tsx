@@ -35,7 +35,7 @@ const CodeInput: React.FC<PropTypes> = ({ onChange }) => {
           <FormInput
             key={numberIndex}
             maxLength={1}
-            className="border-gray-250 text-center text-black w-11 h-11 m-0 px-0 bg-black-rgba"
+            className="border-gray-250 rounded-xl text-center text-black w-11 h-11 m-0 px-0 bg-black-rgba"
             value={number}
             onChange={(e) => onChangeNumber(e, numberIndex)}
           />
