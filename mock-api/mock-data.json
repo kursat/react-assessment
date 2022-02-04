@@ -9,5 +9,46 @@
     "code": "123456"
   },
   "users": [
+    {
+      "email": "johndoe@gmail.com",
+      "phone": null,
+      "verified": true,
+      "fullName": "John Doe",
+      "accountId": "johnd",
+      "id": 1
+    }
+  ],
+  "experiences": [
+    {
+      "name": "DeFi Swap",
+      "shortDescription": "Swap your digital assets",
+      "memberInfo": "+200 users",
+      "icon": "big-cube.png"
+    },
+    {
+      "name": "Docu sign",
+      "shortDescription": "sign smart contracts seamlessly",
+      "memberInfo": "+1K users",
+      "description": "it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly.",
+      "icon": "big-sign.png"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Exchanges",
+      "icon": "rates"
+    },
+    {
+      "title": "Games",
+      "icon": "controller"
+    },
+    {
+      "title": "Marketplaces",
+      "icon": "bag"
+    },
+    {
+      "title": "Defi",
+      "icon": "cube"
+    }
   ]
 }
